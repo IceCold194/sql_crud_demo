@@ -64,4 +64,12 @@ Public Class Form1
         End If
 
     End Sub
+
+    Private Sub ButtonUpdate_Click(sender As Object, e As EventArgs) Handles ButtonUpdate.Click
+        Dim query As String = "UPDATE `crud_demo_db`.`students_tbl` 
+                                SET `name` = @name, 
+                                `age` = @age, 
+                                `email` = @email 
+                                WHERE (`id` = @id);"
+    End Sub
 End Class

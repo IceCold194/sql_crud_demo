@@ -33,6 +33,8 @@ Partial Class Form1
         Me.ButtonRead = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBoxHiddenID = New System.Windows.Forms.TextBox()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -116,7 +118,7 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(15, 296)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(773, 142)
+        Me.DataGridView1.Size = New System.Drawing.Size(416, 142)
         Me.DataGridView1.TabIndex = 9
         '
         'TextBoxHiddenID
@@ -127,11 +129,31 @@ Partial Class Form1
         Me.TextBoxHiddenID.TabIndex = 10
         Me.TextBoxHiddenID.Visible = False
         '
+        'ButtonUpdate
+        '
+        Me.ButtonUpdate.Location = New System.Drawing.Point(226, 198)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(205, 43)
+        Me.ButtonUpdate.TabIndex = 11
+        Me.ButtonUpdate.Text = "UPDATE (Modify Existing Data)"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
+        '
+        'ButtonDelete
+        '
+        Me.ButtonDelete.Location = New System.Drawing.Point(226, 247)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(205, 43)
+        Me.ButtonDelete.TabIndex = 12
+        Me.ButtonDelete.Text = "DELETE (Remove Existing Data)"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(447, 450)
+        Me.Controls.Add(Me.ButtonDelete)
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.TextBoxHiddenID)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ButtonRead)
@@ -162,4 +184,6 @@ Partial Class Form1
     Friend WithEvents ButtonRead As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBoxHiddenID As TextBox
+    Friend WithEvents ButtonUpdate As Button
+    Friend WithEvents ButtonDelete As Button
 End Class
